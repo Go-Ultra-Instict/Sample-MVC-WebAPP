@@ -1,0 +1,13 @@
+﻿
+@ViewBag.user.Name
+@{
+    // Some server-side code here
+    System.Diagnostics.Debugger.Break(); // Insert the breakpoint here
+    // More server-side code here
+}
+@Html.ActionLink("TestPage", "TestPage", "Auth", null, new { @class = "btn btn-primary" })
+
+<script>
+    const userData = @Html.Raw(Json.Serialize(ViewBag.user));
+    localStorage.setItem('userData', JSON.stringify(userData));
+</script>

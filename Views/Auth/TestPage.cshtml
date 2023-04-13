@@ -1,0 +1,23 @@
+﻿
+<h1 id="test">Test</h1>
+<h2>HHHHHA</h2>
+<br />
+@{
+    // Some server-side code here
+    System.Diagnostics.Debugger.Break(); // Insert the breakpoint here
+                                         // More server-side code here
+}
+<button id="logout" onclick=" Logout();">Logout</button>
+<script>
+
+    // Retrieve the user data from local storage and display it in the console
+    const storedData = JSON.parse(localStorage.getItem('userData'));
+    console.log(storedData.name + "HELOOOEOOEOE");
+    //  alert(storedData.Name)
+    document.getElementById("test").textContent = storedData.name == undefined ? "Hello" : storedData.name;
+    function Logout() {
+        localStorage.clear();
+
+        alert("Local Storage ");
+    }
+</script>
